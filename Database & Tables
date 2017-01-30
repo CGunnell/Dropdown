@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS 'categories' (
+  'category_id' int(11) NOT NULL,
+  `category_name` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0:Blocked, 1:Active'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `Sub-Category` (
+  `Sub-Category_id` int(11) NOT NULL,
+  `Sub-Category_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0:Blocked, 1:Active'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `company` (
+  `company_id` int(11) NOT NULL,
+  `company_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `sub-categorystate_id` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0:Blocked, 1:Active'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
