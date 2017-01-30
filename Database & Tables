@@ -14,6 +14,6 @@ CREATE TABLE IF NOT EXISTS `Sub-Category` (
 CREATE TABLE IF NOT EXISTS `company` (
   `company_id` int(11) NOT NULL,
   `company_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `sub-categorystate_id` int(11) NOT NULL,
+  `Sub-category_id` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0:Blocked, 1:Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
